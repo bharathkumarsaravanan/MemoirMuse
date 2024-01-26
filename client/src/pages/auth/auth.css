@@ -3,3 +3,9 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none; /* WebKit browsers like Safari and Chrome */
   margin: 0; /* Removes default margin */
 }
+.bg-auth {
+  background-image: url("../../../assets/images/authBg.jpg");
+}
+.bg-auth form {
+  transform: rotate(-6deg);
+}
