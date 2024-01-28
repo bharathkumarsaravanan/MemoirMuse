@@ -4,5 +4,6 @@ const {userAuth} = require("../controllers/auth");
 
 router.route("/auth")
     .post(userAuth)
+    .get(userAuth)
 
 module.exports = router;
