@@ -1,0 +1,21 @@
+.dateCell:hover {
+  background-color: #3c3c3c;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.dateCell:hover h3, .dateCell:hover h1, .dateCell img {
+    display: none;
+    transition: all 0.3s ease-in-out;
+
+}
+.dateCell:hover img {
+    display: block;
+    transition: all 0.3s ease-in-out;
+    animation-name: camRotate;
+    animation-duration: .5s;
+}
+
+@keyframes camRotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(180deg);}
+  }
