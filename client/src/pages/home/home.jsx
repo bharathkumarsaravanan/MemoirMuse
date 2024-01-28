@@ -14,13 +14,17 @@ export const Home = () => {
         console.log(val.dates);
     }, []);
 
+    const openDiary = (getDate) => {
+        console.log(getDate);
+    }
+
     return (
         <div className="h-screen w-screen">
             <DateContainer className={"flex-wrap gap-10 justify-center px-20 py-14"}> 
                 {
                     val.dates.map((date, index) => {
                         return (
-                            <DateCells key={index} date={date}/>
+                            <DateCells key={index} date={date} clickAction={openDiary} />
                         )
                     })
                 }
