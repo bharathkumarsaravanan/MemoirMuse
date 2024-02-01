@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { dates } from "../../actions/homeActions";
 import { DateContainer } from "../../components/dateContainer/dateContainer";
 import { DateCells } from "../../components/dateCells/dateCells";
+import { hideHomeLink } from "../../store/slices/headerSlice";
 
 export const Home = () => {
     const dispatch = useDispatch();
@@ -11,8 +12,9 @@ export const Home = () => {
 
     useEffect(() => {
         dispatch(dates(postDate));
-        console.log(val.dates);
+        dispatch(hideHomeLink());
     }, []);
+
 
     const openDiary = (getDate) => {
         console.log(getDate);

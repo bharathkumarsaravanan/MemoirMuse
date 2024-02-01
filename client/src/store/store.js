@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./slices/authSlice";
 import { createLogger } from "redux-logger";
 import homeSlice from "./slices/homeSlice";
+import headerSlice from "./slices/headerSlice";
 
 const middleware = (getDefaultMiddleware) => {
     const middlewares = [];
@@ -17,7 +18,8 @@ const middleware = (getDefaultMiddleware) => {
 export const store = configureStore({
     reducer: {
         auth: authSlice,
-        home: homeSlice
+        home: homeSlice,
+        header: headerSlice,
     },
     middleware
 });
